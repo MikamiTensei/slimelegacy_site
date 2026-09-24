@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlimeLegacy — Твоё кубическое приключение начинается здесь</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Slime<span>Legacy</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#features">О сервере</a></li>
+                    <li><a href="#waiting">Контент</a></li>
+                    <li><a href="#cta">Начать</a></li>
+                    <li><a href="#" class="btn-nav">Играть</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Летний вайп 2026 уже здесь</div>
+            <h1>
+                Твоё <span class="gradient-text">кубическое приключение</span><br>
+                начинается здесь
+            </h1>
+            <p class="subtitle">
+                SlimeLegacy — это стабильность 20 TPS, уникальная сборка с технологиями и магией,
+                автоматическая приватизация и квесты для лёгкого старта.
+            </p>
+            <div class="hero-buttons">
+                <a href="#cta" class="btn btn-primary">▶ Начать играть</a>
+                <a href="#features" class="btn btn-outline">Узнать больше</a>
+            </div>
+            <div class="ip-box" onclick="copyIP()">
+                <span class="label">IP сервера</span>
+                <span class="value" id="server-ip">play.slimelegacy.ru</span>
+                <span class="copy-icon">📋</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Почему игроки выбирают <span class="accent">SlimeLegacy</span></h2>
+                <p>Мы создали сервер, на котором хочется остаться надолго</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🌍</span>
+                    <h3>Стабильность 20 TPS</h3>
+                    <p>Уникальная мульти-мировая система гарантирует стабильную работу без лагов.
+                       Сразу после входа вы получаете свой мир с автоматической приватизацией.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🧭</span>
+                    <h3>Понятный старт</h3>
+                    <p>Линия квестов поможет шаг за шагом освоить каждую механику.
+                       Подробные описания заданий значительно упрощают погружение в игру.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⚙️</span>
+                    <h3>Переработанная индустриализация</h3>
+                    <p>Более 100 обновлённых интерфейсов, новые 3D-модели механизмов,
+                       ускоренный автокрафт и переработанная Mekanism в общем стиле проекта.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">✨</span>
+                    <h3>Магия и RPG</h3>
+                    <p>Станьте волшебником или исследуйте тёмные секреты крови.
+                       Уникальные ритуалы, кастомные руны и прогрессия от первых инструментов до боссов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT'S WAITING ===== -->
+    <section id="waiting" class="section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Что вас <span class="accent">ждёт</span> на сервере</h2>
+                <p>Каждый найдёт здесь что-то своё</p>
+            </div>
+            <div class="waiting-grid">
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">🏠</div>
+                    <div>
+                        <h4>Мульти-мировая система</h4>
+                        <p>Свой мир с автоматической приватизацией — без команд и поиска места.</p>
+                    </div>
+                </div>
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">📜</div>
+                    <div>
+                        <h4>Квестовая линия</h4>
+                        <p>Пошаговое изучение модов с подробными описаниями каждой механики.</p>
+                    </div>
+                </div>
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">🧩</div>
+                    <div>
+                        <h4>Уникальные дополнения</h4>
+                        <p>Собственные модификации, которых нет на других проектах.</p>
+                    </div>
+                </div>
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">🎁</div>
+                    <div>
+                        <h4>Loli-боксы с лутом</h4>
+                        <p>Бесплатные награды за время в игре, шанс на легендарный дроп до 50% на выходных.</p>
+                    </div>
+                </div>
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">🐉</div>
+                    <div>
+                        <h4>Сражения с драконами</h4>
+                        <p>Арены, катализаторы и полностью переработанные боссы с уникальными атаками.</p>
+                    </div>
+                </div>
+                <div class="waiting-item fade-in">
+                    <div class="icon-circle">🌌</div>
+                    <div>
+                        <h4>Обновлённый Энд</h4>
+                        <p>Новые биомы, загадочные чёрные дыры и подземелья для исследования.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2 class="fade-in">Играй. Исследуй. Строй.</h2>
+            <p class="fade-in">
+                SlimeLegacy — это не просто сервер. Это мир, который развивается вместе с вами.
+                Присоединяйся и начни своё уникальное кубическое приключение.
+            </p>
+            <div class="fade-in">
+                <a href="#" class="btn btn-primary btn-lg">
+                    ▶ Присоединиться к SlimeLegacy
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">Telegram</a>
+            <a href="#">ВКонтакте</a>
+            <a href="#">Правила</a>
+            <a href="#">Донат</a>
+        </div>
+        <p>© 2026 SlimeLegacy Studios. Не является официальным продуктом Mojang.</p>
+    </footer>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast" id="toast">IP скопирован!</div>
+
+    <script src="scripts/main.js" defer></script>
+
+</body>
+</html>
