@@ -515,3 +515,1007 @@ footer .footer-links a:hover {
         padding: 12px 20px;
     }
 }
+/* ============================================================
+   SHOP PAGE — дополнения (не влияют на index.html)
+   ============================================================ */
+
+/* ---- Логотип-ссылка ---- */
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ---- Активный пункт меню ---- */
+nav a.active {
+    color: #4ade80;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    border-radius: 2px;
+}
+
+/* ---- Мини-hero на странице магазина ---- */
+.shop-hero {
+    padding: 140px 24px 60px;
+    text-align: center;
+    position: relative;
+    background:
+        radial-gradient(ellipse at 25% 40%, rgba(74, 222, 128, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(34, 211, 238, 0.07) 0%, transparent 55%);
+}
+
+.shop-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.shop-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    animation: fadeInDown 0.8s ease 0.1s both;
+}
+
+.shop-hero .subtitle {
+    color: #8b949e;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInDown 0.8s ease 0.2s both;
+}
+
+/* ---- Секции магазина ---- */
+.shop-section {
+    padding: 60px 24px;
+}
+
+.shop-section-alt {
+    background: rgba(22, 27, 34, 0.35);
+    border-top: 1px solid rgba(139, 148, 158, 0.08);
+    border-bottom: 1px solid rgba(139, 148, 158, 0.08);
+}
+
+/* ---- Табы выбора сервера ---- */
+.server-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.server-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 20px 22px;
+    background: rgba(22, 27, 34, 0.6);
+    border: 1px solid rgba(139, 148, 158, 0.12);
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: left;
+    color: #e6edf3;
+    font-family: inherit;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s,
+                box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.server-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.server-tab:hover {
+    transform: translateY(-3px);
+    border-color: rgba(74, 222, 128, 0.25);
+}
+
+.server-tab.active {
+    background: rgba(22, 27, 34, 0.95);
+    border-color: rgba(74, 222, 128, 0.45);
+    box-shadow: 0 12px 30px rgba(74, 222, 128, 0.12);
+}
+
+.server-tab.active::before {
+    opacity: 1;
+}
+
+.tab-icon {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.tab-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #e6edf3;
+}
+
+.server-tab.active .tab-name {
+    color: #4ade80;
+}
+
+.tab-desc {
+    font-size: 0.78rem;
+    color: #8b949e;
+}
+
+/* ---- Список донатов ---- */
+.donate-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.donate-card {
+    position: relative;
+    background: rgba(22, 27, 34, 0.75);
+    border: 1px solid rgba(139, 148, 158, 0.12);
+    border-radius: 16px;
+    padding: 28px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.donate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee, #a78bfa);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.donate-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.28);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.45);
+}
+
+.donate-card:hover::before {
+    opacity: 1;
+}
+
+.donate-card-featured {
+    border-color: rgba(74, 222, 128, 0.35);
+    background: linear-gradient(180deg,
+                rgba(74, 222, 128, 0.05) 0%,
+                rgba(22, 27, 34, 0.85) 40%);
+}
+
+.donate-card-featured::before {
+    opacity: 1;
+}
+
+.donate-ribbon {
+    position: absolute;
+    top: 14px;
+    right: -34px;
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    color: #0d1117;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 40px;
+    transform: rotate(38deg);
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.35);
+}
+
+.donate-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.donate-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.donate-title-block {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.donate-title-block h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #e6edf3;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.donate-tagline {
+    font-size: 0.82rem;
+    color: #8b949e;
+}
+
+.donate-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.price-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+
+.price-period {
+    font-size: 0.72rem;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.donate-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    padding-top: 4px;
+    border-top: 1px solid rgba(139, 148, 158, 0.1);
+}
+
+.donate-features li {
+    position: relative;
+    padding-left: 24px;
+    color: #c9d1d9;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.donate-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4ade80;
+    font-weight: 900;
+    font-size: 0.95rem;
+}
+
+.donate-features li strong {
+    color: #e6edf3;
+}
+
+.donate-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+/* ---- Адаптивность магазина ---- */
+@media (max-width: 768px) {
+    .shop-hero {
+        padding: 110px 20px 40px;
+    }
+
+    .shop-section {
+        padding: 40px 20px;
+    }
+
+    .donate-card {
+        padding: 24px 20px;
+    }
+
+    .donate-ribbon {
+        top: 10px;
+        right: -40px;
+        font-size: 0.66rem;
+        padding: 4px 42px;
+    }
+
+    .donate-head {
+        flex-wrap: wrap;
+    }
+
+    .donate-price {
+        align-items: flex-start;
+        margin-left: 68px;
+    }
+}
+/* ============================================================
+   LK PAGE — личный кабинет (не влияет на index.html и shop.html)
+   ============================================================ */
+
+/* ---- Мини-hero кабинета ---- */
+.lk-hero {
+    padding: 140px 24px 40px;
+    background:
+        radial-gradient(ellipse at 20% 40%, rgba(74, 222, 128, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 25%, rgba(34, 211, 238, 0.07) 0%, transparent 55%);
+}
+
+.lk-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- Профиль ---- */
+.lk-profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 28px;
+    background: rgba(22, 27, 34, 0.75);
+    border: 1px solid rgba(139, 148, 158, 0.12);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lk-profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee, #a78bfa);
+    opacity: 0.85;
+}
+
+.lk-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.lk-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    color: #0d1117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    box-shadow: 0 10px 30px rgba(74, 222, 128, 0.25);
+    user-select: none;
+}
+
+.lk-online-dot {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4ade80;
+    border: 3px solid #0d1117;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.8);
+}
+
+.lk-profile-info {
+    flex-grow: 1;
+    min-width: 240px;
+}
+
+.lk-nickname {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.lk-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(74, 222, 128, 0.12);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+.lk-subline {
+    font-size: 0.85rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+.lk-subline .mono {
+    font-family: 'Courier New', monospace;
+    color: #c9d1d9;
+    font-size: 0.82rem;
+}
+
+.lk-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lk-btn-small {
+    padding: 10px 18px !important;
+    font-size: 0.85rem !important;
+}
+
+/* ---- Быстрая статистика ---- */
+.lk-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.lk-stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 22px;
+    background: rgba(22, 27, 34, 0.6);
+    border: 1px solid rgba(139, 148, 158, 0.1);
+    border-radius: 14px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.lk-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(74, 222, 128, 0.25);
+}
+
+.lk-stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8b949e;
+}
+
+.lk-stat-value {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #e6edf3;
+    line-height: 1.1;
+}
+
+.lk-stat-value.accent {
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ---- Секция с табами ---- */
+.lk-section {
+    padding: 40px 24px 80px;
+}
+
+/* ---- Табы ---- */
+.lk-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(139, 148, 158, 0.12);
+    margin-bottom: 32px;
+    padding-bottom: 2px;
+}
+
+.lk-tab {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+}
+
+.lk-tab:hover {
+    color: #e6edf3;
+    background: rgba(22, 27, 34, 0.6);
+}
+
+.lk-tab.active {
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.06);
+}
+
+.lk-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    border-radius: 2px;
+}
+
+/* ---- Панели ---- */
+.lk-panel {
+    display: none;
+    animation: fadeInDown 0.35s ease;
+}
+
+.lk-panel.active {
+    display: block;
+}
+
+/* ---- Сетка 2 колонки ---- */
+.lk-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+/* ---- Карточки ---- */
+.lk-card {
+    background: rgba(22, 27, 34, 0.75);
+    border: 1px solid rgba(139, 148, 158, 0.12);
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.lk-card-wide {
+    grid-column: 1 / -1;
+}
+
+.lk-card-accent {
+    border-color: rgba(74, 222, 128, 0.35);
+    background: linear-gradient(180deg,
+                rgba(74, 222, 128, 0.06) 0%,
+                rgba(22, 27, 34, 0.85) 45%);
+    box-shadow: 0 16px 40px rgba(74, 222, 128, 0.08);
+}
+
+.lk-card-danger {
+    border-color: rgba(248, 113, 113, 0.28);
+    background: linear-gradient(180deg,
+                rgba(248, 113, 113, 0.04) 0%,
+                rgba(22, 27, 34, 0.85) 45%);
+}
+
+.lk-card-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #e6edf3;
+}
+
+.lk-card-subtitle {
+    font-size: 0.85rem;
+    color: #8b949e;
+    margin-bottom: 4px;
+}
+
+/* ---- Прогресс-бары ---- */
+.lk-progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.lk-progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lk-progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+}
+
+.lk-progress-name {
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+.lk-progress-value {
+    color: #4ade80;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.lk-bar {
+    height: 8px;
+    background: rgba(139, 148, 158, 0.12);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.lk-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    transition: width 0.5s ease;
+}
+
+/* ---- Активная привилегия ---- */
+.lk-privilege {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 14px;
+    margin-top: 4px;
+}
+
+.lk-privilege-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: rgba(74, 222, 128, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.lk-privilege-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lk-privilege-desc {
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin-top: 2px;
+}
+
+.lk-privilege-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0;
+}
+
+.lk-privilege-features li {
+    position: relative;
+    padding-left: 22px;
+    color: #c9d1d9;
+    font-size: 0.87rem;
+}
+
+.lk-privilege-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4ade80;
+    font-weight: 900;
+}
+
+.lk-btn-full {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* ---- Активность ---- */
+.lk-activity {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lk-activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 8px;
+    border-bottom: 1px solid rgba(139, 148, 158, 0.08);
+}
+
+.lk-activity-item:last-child {
+    border-bottom: none;
+}
+
+.lk-activity-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.95rem;
+}
+
+.lk-activity-icon.ok {
+    background: rgba(74, 222, 128, 0.12);
+    color: #4ade80;
+}
+
+.lk-activity-icon.info {
+    background: rgba(34, 211, 238, 0.12);
+    color: #22d3ee;
+}
+
+.lk-activity-icon.warn {
+    background: rgba(250, 204, 21, 0.12);
+    color: #facc15;
+}
+
+.lk-activity-text {
+    font-size: 0.9rem;
+    color: #c9d1d9;
+    line-height: 1.5;
+}
+
+.lk-activity-text strong {
+    color: #e6edf3;
+}
+
+.lk-activity-time {
+    font-size: 0.75rem;
+    color: #8b949e;
+    margin-top: 2px;
+}
+
+/* ---- Список инфо (серверы) ---- */
+.lk-info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 4px 0 8px;
+}
+
+.lk-info-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(139, 148, 158, 0.1);
+}
+
+.lk-info-list li:last-child {
+    border-bottom: none;
+}
+
+.lk-info-list span {
+    color: #8b949e;
+}
+
+.lk-info-list strong {
+    color: #e6edf3;
+}
+
+/* ---- Таблица покупок ---- */
+.lk-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 148, 158, 0.1);
+}
+
+.lk-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+.lk-table th,
+.lk-table td {
+    text-align: left;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(139, 148, 158, 0.08);
+}
+
+.lk-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8b949e;
+    font-weight: 700;
+    background: rgba(13, 17, 23, 0.5);
+}
+
+.lk-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.lk-table tbody tr:hover {
+    background: rgba(74, 222, 128, 0.04);
+}
+
+.lk-table td .accent {
+    background: linear-gradient(135deg, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.lk-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.lk-badge.ok {
+    background: rgba(74, 222, 128, 0.12);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+.lk-badge.muted {
+    background: rgba(139, 148, 158, 0.1);
+    border: 1px solid rgba(139, 148, 158, 0.2);
+    color: #8b949e;
+}
+
+/* ---- Поля настроек ---- */
+.lk-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.lk-field label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8b949e;
+}
+
+.lk-field input {
+    background: #1c2230;
+    border: 1px solid #2a313c;
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 0.92rem;
+    color: #e6edf3;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.lk-field input:focus {
+    border-color: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+}
+
+/* ---- Опасная зона ---- */
+.lk-danger-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid rgba(248, 113, 113, 0.15);
+    border-radius: 12px;
+    background: rgba(13, 17, 23, 0.5);
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.lk-danger-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #e6edf3;
+}
+
+.lk-danger-desc {
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin-top: 2px;
+}
+
+.btn.danger {
+    color: #f87171 !important;
+    border-color: rgba(248, 113, 113, 0.35) !important;
+}
+
+.btn.danger:hover {
+    border-color: #f87171 !important;
+    color: #f87171 !important;
+    background: rgba(248, 113, 113, 0.06) !important;
+}
+
+/* ---- Адаптивность LK ---- */
+@media (max-width: 640px) {
+    .lk-hero {
+        padding: 110px 20px 30px;
+    }
+
+    .lk-section {
+        padding: 30px 20px 60px;
+    }
+
+    .lk-profile {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    .lk-avatar {
+        width: 68px;
+        height: 68px;
+        font-size: 1.8rem;
+    }
+
+    .lk-actions {
+        width: 100%;
+    }
+
+    .lk-actions .btn {
+        flex: 1;
+    }
+
+    .lk-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 6px;
+    }
+
+    .lk-tab {
+        white-space: nowrap;
+    }
+}

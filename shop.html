@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин — SlimeLegacy</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">Slime<span>Legacy</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#features">О сервере</a></li>
+                    <li><a href="index.html#waiting">Контент</a></li>
+                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="lk.html" class="active">Кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SHOP HERO ===== -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <div class="hero-badge">Поддержи проект — получи бонусы</div>
+            <h1>Магазин <span class="gradient-text">SlimeLegacy</span></h1>
+            <p class="subtitle">
+                Выбери сервер, найди подходящий донат и получи доступ к уникальным
+                возможностям, косметике и привилегиям. Все средства идут на развитие проекта.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SERVER SELECTOR ===== -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Выбери <span class="accent">сервер</span></h2>
+                <p>У каждого сервера свои виды доната и привилегии</p>
+            </div>
+
+            <div class="server-tabs" id="server-tabs">
+                <button class="server-tab active" data-server="survival">
+                    <span class="tab-icon">🌳</span>
+                    <span class="tab-name">Survival</span>
+                    <span class="tab-desc">Классическое выживание</span>
+                </button>
+                <button class="server-tab" data-server="tech">
+                    <span class="tab-icon">⚙️</span>
+                    <span class="tab-name">Tech</span>
+                    <span class="tab-desc">Индустрия и автоматизация</span>
+                </button>
+                <button class="server-tab" data-server="magic">
+                    <span class="tab-icon">✨</span>
+                    <span class="tab-name">Magic</span>
+                    <span class="tab-desc">Магия и RPG</span>
+                </button>
+                <button class="server-tab" data-server="skyblock">
+                    <span class="tab-icon">☁️</span>
+                    <span class="tab-name">SkyBlock</span>
+                    <span class="tab-desc">Острова и экономика</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DONATE LIST ===== -->
+    <section class="shop-section shop-section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Виды <span class="accent">доната</span></h2>
+                <p id="donate-subtitle">Привилегии для сервера Survival</p>
+            </div>
+
+            <div class="donate-list" id="donate-list">
+
+                <!-- === SURVIVAL (по умолчанию) === -->
+                <article class="donate-card fade-in" data-server="survival">
+                    <div class="donate-head">
+                        <div class="donate-icon">🥉</div>
+                        <div class="donate-title-block">
+                            <h3>VIP</h3>
+                            <p class="donate-tagline">Первый шаг к комфорту</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">199 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Цветной ник в чате</li>
+                        <li>Префикс <strong>[VIP]</strong></li>
+                        <li>Доступ к /kit vip (раз в 24 часа)</li>
+                        <li>2 дополнительных точки /home</li>
+                        <li>Приоритетный вход при полном сервере</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить VIP</button>
+                </article>
+
+                <article class="donate-card fade-in" data-server="survival">
+                    <div class="donate-head">
+                        <div class="donate-icon">🥈</div>
+                        <div class="donate-title-block">
+                            <h3>Premium</h3>
+                            <p class="donate-tagline">Больше возможностей</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">499 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>VIP</strong></li>
+                        <li>Префикс <strong>[PREMIUM]</strong></li>
+                        <li>5 дополнительных точек /home</li>
+                        <li>Команда /feed и /heal</li>
+                        <li>Доступ к /ec (эндер-сундук из любой точки)</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Premium</button>
+                </article>
+
+                <article class="donate-card donate-card-featured fade-in" data-server="survival">
+                    <div class="donate-ribbon">Популярное</div>
+                    <div class="donate-head">
+                        <div class="donate-icon">🥇</div>
+                        <div class="donate-title-block">
+                            <h3>Legend</h3>
+                            <p class="donate-tagline">Максимум для выживания</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">999 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Premium</strong></li>
+                        <li>Префикс <strong>[LEGEND]</strong> с градиентом</li>
+                        <li>10 дополнительных точек /home</li>
+                        <li>Команда /fly в своём регионе</li>
+                        <li>Доступ к /craft и /anvil</li>
+                        <li>Уникальный питомец-слайм</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Legend</button>
+                </article>
+
+                <article class="donate-card fade-in" data-server="survival">
+                    <div class="donate-head">
+                        <div class="donate-icon">👑</div>
+                        <div class="donate-title-block">
+                            <h3>Immortal</h3>
+                            <p class="donate-tagline">Абсолютная власть</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">1 999 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Legend</strong></li>
+                        <li>Префикс <strong>[IMMORTAL]</strong> с анимацией</li>
+                        <li>Неограниченное количество /home</li>
+                        <li>Команда /fly в любом мире</li>
+                        <li>Свой цветной чат</li>
+                        <li>Доступ к закрытому Discord-каналу</li>
+                        <li>Голос в разработке проекта</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Immortal</button>
+                </article>
+
+                <!-- === TECH === -->
+                <article class="donate-card fade-in" data-server="tech" hidden>
+                    <div class="donate-head">
+                        <div class="donate-icon">🔩</div>
+                        <div class="donate-title-block">
+                            <h3>Engineer</h3>
+                            <p class="donate-tagline">Для начинающих инженеров</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">249 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Цветной ник в чате</li>
+                        <li>Доступ к /kit engineer</li>
+                        <li>Скидка 10% на рынке</li>
+                        <li>2 дополнительных региона</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Engineer</button>
+                </article>
+
+                <article class="donate-card fade-in" data-server="tech" hidden>
+                    <div class="donate-head">
+                        <div class="donate-icon">🛠️</div>
+                        <div class="donate-title-block">
+                            <h3>Industrialist</h3>
+                            <p class="donate-tagline">Заводы ждут тебя</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">699 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Engineer</strong></li>
+                        <li>Скидка 20% на рынке</li>
+                        <li>Доступ к /craft и /anvil</li>
+                        <li>5 дополнительных регионов</li>
+                        <li>Приоритетная очередь на сервер</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Industrialist</button>
+                </article>
+
+                <article class="donate-card donate-card-featured fade-in" data-server="tech" hidden>
+                    <div class="donate-ribbon">Популярное</div>
+                    <div class="donate-head">
+                        <div class="donate-icon">⚡</div>
+                        <div class="donate-title-block">
+                            <h3>Magnate</h3>
+                            <p class="donate-tagline">Контроль над индустрией</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">1 299 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Industrialist</strong></li>
+                        <li>Скидка 30% на рынке</li>
+                        <li>Личный телепорт-хаб</li>
+                        <li>Доступ к /fly в своём регионе</li>
+                        <li>Уникальный индустриальный скин-эффект</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Magnate</button>
+                </article>
+
+                <!-- === MAGIC === -->
+                <article class="donate-card fade-in" data-server="magic" hidden>
+                    <div class="donate-head">
+                        <div class="donate-icon">🔮</div>
+                        <div class="donate-title-block">
+                            <h3>Adept</h3>
+                            <p class="donate-tagline">Первые шаги в магии</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">249 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Цветной ник в чате</li>
+                        <li>Набор трав и реагентов</li>
+                        <li>Доступ к /kit adept</li>
+                        <li>1 дополнительный ритуальный круг</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Adept</button>
+                </article>
+
+                <article class="donate-card donate-card-featured fade-in" data-server="magic" hidden>
+                    <div class="donate-ribbon">Популярное</div>
+                    <div class="donate-head">
+                        <div class="donate-icon">🧙</div>
+                        <div class="donate-title-block">
+                            <h3>Archmage</h3>
+                            <p class="donate-tagline">Мастер тайных искусств</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">1 499 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Adept</strong></li>
+                        <li>Уникальные кастомные руны</li>
+                        <li>Ускоренное изучение заклинаний</li>
+                        <li>Личная башня мага (регион + декор)</li>
+                        <li>Питомец-фамильяр с бонусами</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Archmage</button>
+                </article>
+
+                <!-- === SKYBLOCK === -->
+                <article class="donate-card fade-in" data-server="skyblock" hidden>
+                    <div class="donate-head">
+                        <div class="donate-icon">🏝️</div>
+                        <div class="donate-title-block">
+                            <h3>Islander</h3>
+                            <p class="donate-tagline">Старт на своём острове</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">199 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Цветной ник в чате</li>
+                        <li>Стартовый набор ресурсов</li>
+                        <li>2 дополнительных острова для кооператива</li>
+                        <li>Команда /is warp</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить Islander</button>
+                </article>
+
+                <article class="donate-card donate-card-featured fade-in" data-server="skyblock" hidden>
+                    <div class="donate-ribbon">Популярное</div>
+                    <div class="donate-head">
+                        <div class="donate-icon">🐉</div>
+                        <div class="donate-title-block">
+                            <h3>SkyLord</h3>
+                            <p class="donate-tagline">Хозяин небес</p>
+                        </div>
+                        <div class="donate-price">
+                            <span class="price-value">1 299 ₽</span>
+                            <span class="price-period">навсегда</span>
+                        </div>
+                    </div>
+                    <ul class="donate-features">
+                        <li>Всё из <strong>Islander</strong></li>
+                        <li>Увеличенный лимит острова в 2 раза</li>
+                        <li>Личный генератор ресурсов</li>
+                        <li>Доступ к /fly на своём острове</li>
+                        <li>Эксклюзивный скин-эффект «Облака»</li>
+                    </ul>
+                    <button class="btn btn-primary donate-btn">Купить SkyLord</button>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="fade-in">Не нашёл подходящий донат?</h2>
+            <p class="fade-in">
+                Напиши нам в Discord — мы поможем подобрать привилегию
+                под твой стиль игры или соберём индивидуальное предложение.
+            </p>
+            <div class="fade-in">
+                <a href="#" class="btn btn-primary btn-lg">💬 Написать в Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">Telegram</a>
+            <a href="#">ВКонтакте</a>
+            <a href="#">Правила</a>
+            <a href="shop.html">Донат</a>
+        </div>
+        <p>© 2026 SlimeLegacy Studios. Не является официальным продуктом Mojang.</p>
+    </footer>
+
+    <div class="toast" id="toast">Сервер выбран</div>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

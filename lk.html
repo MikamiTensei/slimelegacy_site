@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — SlimeLegacy</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">Slime<span>Legacy</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#features">О сервере</a></li>
+                    <li><a href="index.html#waiting">Контент</a></li>
+                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="lk.html" class="active">Кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== LK HERO ===== -->
+    <section class="lk-hero">
+        <div class="lk-hero-content">
+
+            <!-- Аватар + ник -->
+            <div class="lk-profile">
+                <div class="lk-avatar-wrap">
+                    <div class="lk-avatar" id="lk-avatar">S</div>
+                    <span class="lk-online-dot" title="В сети"></span>
+                </div>
+                <div class="lk-profile-info">
+                    <h1 class="lk-nickname">
+                        <span id="lk-nickname">Steve</span>
+                        <span class="lk-tag" id="lk-tag">Игрок</span>
+                    </h1>
+                    <p class="lk-subline">
+                        UUID: <span class="mono" id="lk-uuid">00000000-0000-0000-0000-000000000000</span>
+                    </p>
+                    <p class="lk-subline">
+                        Зарегистрирован: <span id="lk-regdate">01.01.2026</span>
+                    </p>
+                </div>
+                <div class="lk-actions">
+                    <button class="btn btn-outline lk-btn-small" id="lk-refresh">
+                        🔄 Обновить
+                    </button>
+                    <button class="btn btn-outline lk-btn-small" id="lk-logout">
+                        🚪 Выйти
+                    </button>
+                </div>
+            </div>
+
+            <!-- Быстрая статистика -->
+            <div class="lk-quick-stats">
+                <div class="lk-stat-card">
+                    <span class="lk-stat-label">Всего часов</span>
+                    <span class="lk-stat-value" id="stat-hours">128</span>
+                </div>
+                <div class="lk-stat-card">
+                    <span class="lk-stat-label">Баланс</span>
+                    <span class="lk-stat-value accent" id="stat-balance">1 250 ₽</span>
+                </div>
+                <div class="lk-stat-card">
+                    <span class="lk-stat-label">Убийств</span>
+                    <span class="lk-stat-value" id="stat-kills">342</span>
+                </div>
+                <div class="lk-stat-card">
+                    <span class="lk-stat-label">Смертей</span>
+                    <span class="lk-stat-value" id="stat-deaths">87</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== TABS ===== -->
+    <section class="lk-section">
+        <div class="container">
+            <div class="lk-tabs" id="lk-tabs">
+                <button class="lk-tab active" data-tab="overview">Обзор</button>
+                <button class="lk-tab" data-tab="servers">Мои серверы</button>
+                <button class="lk-tab" data-tab="purchases">Покупки</button>
+                <button class="lk-tab" data-tab="settings">Настройки</button>
+            </div>
+
+            <!-- ==== TAB: OVERVIEW ==== -->
+            <div class="lk-panel active" data-panel="overview">
+
+                <div class="lk-grid-2">
+                    <!-- Прогресс -->
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">Прогресс на серверах</h3>
+                        <p class="lk-card-subtitle">Твой уровень и опыт на каждом сервере</p>
+
+                        <div class="lk-progress-list">
+                            <div class="lk-progress-item">
+                                <div class="lk-progress-head">
+                                    <span class="lk-progress-name">🌳 Survival</span>
+                                    <span class="lk-progress-value">Ур. 42</span>
+                                </div>
+                                <div class="lk-bar"><div class="lk-bar-fill" style="width: 68%"></div></div>
+                            </div>
+                            <div class="lk-progress-item">
+                                <div class="lk-progress-head">
+                                    <span class="lk-progress-name">⚙️ Tech</span>
+                                    <span class="lk-progress-value">Ур. 27</span>
+                                </div>
+                                <div class="lk-bar"><div class="lk-bar-fill" style="width: 43%"></div></div>
+                            </div>
+                            <div class="lk-progress-item">
+                                <div class="lk-progress-head">
+                                    <span class="lk-progress-name">✨ Magic</span>
+                                    <span class="lk-progress-value">Ур. 15</span>
+                                </div>
+                                <div class="lk-bar"><div class="lk-bar-fill" style="width: 22%"></div></div>
+                            </div>
+                            <div class="lk-progress-item">
+                                <div class="lk-progress-head">
+                                    <span class="lk-progress-name">☁️ SkyBlock</span>
+                                    <span class="lk-progress-value">Ур. 8</span>
+                                </div>
+                                <div class="lk-bar"><div class="lk-bar-fill" style="width: 12%"></div></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Активная привилегия -->
+                    <article class="lk-card lk-card-accent fade-in">
+                        <h3 class="lk-card-title">Активная привилегия</h3>
+                        <p class="lk-card-subtitle">Текущий статус на сервере Survival</p>
+
+                        <div class="lk-privilege">
+                            <div class="lk-privilege-icon">🥇</div>
+                            <div>
+                                <div class="lk-privilege-name">Legend</div>
+                                <div class="lk-privilege-desc">Действует до 01.01.2027</div>
+                            </div>
+                        </div>
+
+                        <ul class="lk-privilege-features">
+                            <li>10 точек /home</li>
+                            <li>/fly в своём регионе</li>
+                            <li>/craft и /anvil</li>
+                            <li>Питомец-слайм</li>
+                        </ul>
+
+                        <a href="shop.html" class="btn btn-primary lk-btn-full">Улучшить до Immortal</a>
+                    </article>
+                </div>
+
+                <!-- Последняя активность -->
+                <article class="lk-card fade-in lk-card-wide">
+                    <h3 class="lk-card-title">Последняя активность</h3>
+                    <p class="lk-card-subtitle">Что происходило на твоём аккаунте</p>
+
+                    <ul class="lk-activity">
+                        <li class="lk-activity-item">
+                            <span class="lk-activity-icon ok">✓</span>
+                            <div>
+                                <div class="lk-activity-text">Получен донат <strong>Legend</strong> на сервере Survival</div>
+                                <div class="lk-activity-time">2 дня назад</div>
+                            </div>
+                        </li>
+                        <li class="lk-activity-item">
+                            <span class="lk-activity-icon info">i</span>
+                            <div>
+                                <div class="lk-activity-text">Смена ника со <strong>Player123</strong> на <strong>Steve</strong></div>
+                                <div class="lk-activity-time">5 дней назад</div>
+                            </div>
+                        </li>
+                        <li class="lk-activity-item">
+                            <span class="lk-activity-icon warn">!</span>
+                            <div>
+                                <div class="lk-activity-text">Предупреждение за Caps Lock в чате</div>
+                                <div class="lk-activity-time">неделю назад</div>
+                            </div>
+                        </li>
+                        <li class="lk-activity-item">
+                            <span class="lk-activity-icon ok">✓</span>
+                            <div>
+                                <div class="lk-activity-text">Привязан Discord-аккаунт</div>
+                                <div class="lk-activity-time">2 недели назад</div>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- ==== TAB: SERVERS ==== -->
+            <div class="lk-panel" data-panel="servers">
+                <div class="lk-grid-2">
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">🌳 Survival</h3>
+                        <p class="lk-card-subtitle">Классическое выживание</p>
+                        <ul class="lk-info-list">
+                            <li><span>Уровень:</span> <strong>42</strong></li>
+                            <li><span>Часов:</span> <strong>82</strong></li>
+                            <li><span>Регионов:</span> <strong>3</strong></li>
+                            <li><span>Последний вход:</span> <strong>сегодня</strong></li>
+                        </ul>
+                        <button class="btn btn-outline lk-btn-full">Перейти на сервер</button>
+                    </article>
+
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">⚙️ Tech</h3>
+                        <p class="lk-card-subtitle">Индустрия и автоматизация</p>
+                        <ul class="lk-info-list">
+                            <li><span>Уровень:</span> <strong>27</strong></li>
+                            <li><span>Часов:</span> <strong>34</strong></li>
+                            <li><span>Регионов:</span> <strong>2</strong></li>
+                            <li><span>Последний вход:</span> <strong>вчера</strong></li>
+                        </ul>
+                        <button class="btn btn-outline lk-btn-full">Перейти на сервер</button>
+                    </article>
+
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">✨ Magic</h3>
+                        <p class="lk-card-subtitle">Магия и RPG</p>
+                        <ul class="lk-info-list">
+                            <li><span>Уровень:</span> <strong>15</strong></li>
+                            <li><span>Часов:</span> <strong>10</strong></li>
+                            <li><span>Регионов:</span> <strong>1</strong></li>
+                            <li><span>Последний вход:</span> <strong>3 дня назад</strong></li>
+                        </ul>
+                        <button class="btn btn-outline lk-btn-full">Перейти на сервер</button>
+                    </article>
+
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">☁️ SkyBlock</h3>
+                        <p class="lk-card-subtitle">Острова и экономика</p>
+                        <ul class="lk-info-list">
+                            <li><span>Уровень:</span> <strong>8</strong></li>
+                            <li><span>Часов:</span> <strong>2</strong></li>
+                            <li><span>Островов:</span> <strong>1</strong></li>
+                            <li><span>Последний вход:</span> <strong>не заходил</strong></li>
+                        </ul>
+                        <button class="btn btn-outline lk-btn-full">Перейти на сервер</button>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ==== TAB: PURCHASES ==== -->
+            <div class="lk-panel" data-panel="purchases">
+                <article class="lk-card fade-in lk-card-wide">
+                    <h3 class="lk-card-title">История покупок</h3>
+                    <p class="lk-card-subtitle">Все твои донаты и приобретения</p>
+
+                    <div class="lk-table-wrap">
+                        <table class="lk-table">
+                            <thead>
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Товар</th>
+                                    <th>Сервер</th>
+                                    <th>Сумма</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>22.09.2026</td>
+                                    <td><strong>Legend</strong></td>
+                                    <td>Survival</td>
+                                    <td class="accent">999 ₽</td>
+                                    <td><span class="lk-badge ok">Активен</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10.08.2026</td>
+                                    <td>Engineer</td>
+                                    <td>Tech</td>
+                                    <td class="accent">249 ₽</td>
+                                    <td><span class="lk-badge ok">Активен</span></td>
+                                </tr>
+                                <tr>
+                                    <td>15.06.2026</td>
+                                    <td>Adept</td>
+                                    <td>Magic</td>
+                                    <td class="accent">249 ₽</td>
+                                    <td><span class="lk-badge muted">Истёк</span></td>
+                                </tr>
+                                <tr>
+                                    <td>02.05.2026</td>
+                                    <td>VIP</td>
+                                    <td>Survival</td>
+                                    <td class="accent">199 ₽</td>
+                                    <td><span class="lk-badge muted">Истёк</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ==== TAB: SETTINGS ==== -->
+            <div class="lk-panel" data-panel="settings">
+                <div class="lk-grid-2">
+                    <article class="lk-card fade-in">
+                        <h3 class="lk-card-title">Основные настройки</h3>
+                        <p class="lk-card-subtitle">Измени данные своего аккаунта</p>
+
+                        <div class="lk-field">
+                            <label>Никнейм</label>
+                            <input type="text" id="set-nick" value="Steve" />
+                        </div>
+
+                        <div class="lk-field">
+                            <label>Email</label>
+                            <input type="email" id="set-email" value="steve@example.com" />
+                        </div>
+
+                        <div class="lk-field">
+                            <label>Discord</label>
+                            <input type="text" id="set-discord" value="steve#1234" />
+                        </div>
+
+                        <button class="btn btn-primary lk-btn-full" id="set-save">
+                            Сохранить изменения
+                        </button>
+                    </article>
+
+                    <article class="lk-card lk-card-danger fade-in">
+                        <h3 class="lk-card-title">Опасная зона</h3>
+                        <p class="lk-card-subtitle">Действия, которые нельзя отменить</p>
+
+                        <div class="lk-danger-block">
+                            <div>
+                                <div class="lk-danger-title">Сбросить статистику</div>
+                                <div class="lk-danger-desc">Обнулить уровни, часы и убийства на всех серверах.</div>
+                            </div>
+                            <button class="btn btn-outline lk-btn-small danger" id="reset-stats">
+                                Сбросить
+                            </button>
+                        </div>
+
+                        <div class="lk-danger-block">
+                            <div>
+                                <div class="lk-danger-title">Сменить пароль</div>
+                                <div class="lk-danger-desc">Ты будешь разлогинен на всех устройствах.</div>
+                            </div>
+                            <button class="btn btn-outline lk-btn-small" id="change-pass">
+                                Сменить
+                            </button>
+                        </div>
+
+                        <div class="lk-danger-block">
+                            <div>
+                                <div class="lk-danger-title">Удалить аккаунт</div>
+                                <div class="lk-danger-desc">Полное удаление профиля и всех покупок.</div>
+                            </div>
+                            <button class="btn btn-outline lk-btn-small danger" id="delete-account">
+                                Удалить
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">Telegram</a>
+            <a href="#">ВКонтакте</a>
+            <a href="#">Правила</a>
+            <a href="shop.html">Донат</a>
+        </div>
+        <p>© 2026 SlimeLegacy Studios. Не является официальным продуктом Mojang.</p>
+    </footer>
+
+    <div class="toast" id="toast">Готово</div>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
